@@ -1,0 +1,12 @@
+.git/*
+.*swp
+.*swo
+tags
+Session.vim
+.shada
+.undo/*
+.backup/*
+.swap/*
+.directory
+node_modules/**
+install.sh
