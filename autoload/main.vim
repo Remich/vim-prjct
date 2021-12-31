@@ -8,6 +8,9 @@ function! main#Init()
 		return
 	endif
 
+	" clear the jump list
+	clearjumps
+
 	" set settings
 	" use the current working directory as location for the backup directory
 	set backupdir=./.backup//

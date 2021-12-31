@@ -1,9 +1,15 @@
 #!/bin/bash
 
+BINARY="/usr/local/bin/nvim.appimage"
+ARGS=""
+
 if [[ -d ".git" ]]; then
-	exec /usr/local/bin/nvim.appimage -i .shada "$@"
-else
-	exec /usr/local/bin/nvim.appimage "$@"
+	ARGS="-i .shada"
 fi
 
-exit 0 
+if [ -f "Session.vim" ]; then
+	ARGS="$ARGS -S Session.vim"
+fi
+
+exec "$BINARY" $ARGS "$@"
+exit 0
